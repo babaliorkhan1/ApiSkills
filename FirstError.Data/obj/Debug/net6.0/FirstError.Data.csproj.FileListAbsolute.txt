@@ -1,0 +1,17 @@
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\bin\Debug\net6.0\FirstError.Data.deps.json
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\bin\Debug\net6.0\FirstError.Data.runtimeconfig.json
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\bin\Debug\net6.0\FirstError.Data.dll
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\bin\Debug\net6.0\FirstError.Data.pdb
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\bin\Debug\net6.0\FirstError.Core.dll
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\bin\Debug\net6.0\FirstError.Core.pdb
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\obj\Debug\net6.0\FirstError.Data.csproj.AssemblyReference.cache
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\obj\Debug\net6.0\FirstError.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\obj\Debug\net6.0\FirstError.Data.AssemblyInfoInputs.cache
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\obj\Debug\net6.0\FirstError.Data.AssemblyInfo.cs
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\obj\Debug\net6.0\FirstError.Data.csproj.CoreCompileInputs.cache
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\obj\Debug\net6.0\FirstError.Data.csproj.CopyComplete
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\obj\Debug\net6.0\FirstError.Data.dll
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\obj\Debug\net6.0\refint\FirstError.Data.dll
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\obj\Debug\net6.0\FirstError.Data.pdb
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\obj\Debug\net6.0\FirstError.Data.genruntimeconfig.cache
+C:\Users\MERDAN\Music\FirstError\FirstError.Data\obj\Debug\net6.0\ref\FirstError.Data.dll
