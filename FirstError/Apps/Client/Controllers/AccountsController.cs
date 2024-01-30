@@ -24,6 +24,7 @@ namespace FirstError.Apps.Client.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody]RegisterDto registerDto)
         {
+           
 
             var result = await _accountService.Register(registerDto);
             return StatusCode(result.StatusCode, result);    

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6LSMS7fIL9Bk/DGUPqV+8Kn8uDCNmPxYLnPEw7FJc+s=",
+  "Hash": "x490pH3T23Dka/Xi1FD2qJCHjVjhvXyuDWBfrFmBIG0=",
   "Source": "FirstError.Client",
   "BasePath": "_content/FirstError.Client",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\MERDAN\\Music\\FirstError\\FirstError.Client\\obj\\Debug\\net6.0\\scopedcss\\bundle\\FirstError.Client.styles.css",
-      "SourceId": "FirstError.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\MERDAN\\Music\\FirstError\\FirstError.Client\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/FirstError.Client",
-      "RelativePath": "FirstError.Client.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\MERDAN\\Music\\FirstError\\FirstError.Client\\obj\\Debug\\net6.0\\scopedcss\\bundle\\FirstError.Client.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\MERDAN\\Music\\FirstError\\FirstError.Client\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FirstError.Client.bundle.scp.css",
-      "SourceId": "FirstError.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\MERDAN\\Music\\FirstError\\FirstError.Client\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/FirstError.Client",
-      "RelativePath": "FirstError.Client.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\MERDAN\\Music\\FirstError\\FirstError.Client\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FirstError.Client.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\MERDAN\\Music\\FirstError\\FirstError.Client\\wwwroot\\css\\site.css",
       "SourceId": "FirstError.Client",

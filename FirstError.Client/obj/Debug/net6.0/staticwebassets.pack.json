@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\MERDAN\\Music\\FirstError\\FirstError.Client\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FirstError.Client.bundle.scp.css",
-      "PackagePath": "staticwebassets\\FirstError.Client.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\MERDAN\\Music\\FirstError\\FirstError.Client\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

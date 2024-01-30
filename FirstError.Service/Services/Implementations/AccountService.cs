@@ -71,7 +71,8 @@ namespace FirstError.Service.Services.Implementations
                 );
             string token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
 
-            return new ApiResponse { StatusCode = 200, items = new { token = token } };
+            //return new ApiResponse { StatusCode = 200, items = new { token = token } };
+            return new ApiResponse { StatusCode = 200, items = token };
         }
 
         public async Task<ApiResponse> Register(RegisterDto registerDto)

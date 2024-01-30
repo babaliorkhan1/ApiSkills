@@ -5,6 +5,7 @@ using FirstApi.Service.Profiles.Categories;
 using FirstApi.Service.Validations.Categories;
 using FirstApi.Services.Implementations;
 using FirstApi.Services.Interfaces;
+using FirstError.Api.Extentions;
 using FirstError.Core.Entities;
 using FirstError.Core.Repositories1;
 using FirstError.Data.Repositoriess.Implemantations;
@@ -133,12 +134,13 @@ if (app.Environment.IsDevelopment())
 }
 
 
-
-
+//app.UseExceptionHandler();//bunun sayesinde bash veren butun exceptionlari tuta bilirik
+app.CustomExceptionHandler();
+//app.UseExceptionHandler();
 app.UseSerilogRequestLogging(); 
 app.UseHttpsRedirection();
 
-
+//app.UseExceptionHandler();
 app.UseStaticFiles();
 app.UseAuthentication();    
 app.UseAuthorization();

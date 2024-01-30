@@ -96,3 +96,4 @@ C:\Users\MERDAN\Music\FirstError\FirstError\obj\Debug\net6.0\refint\FirstError.A
 C:\Users\MERDAN\Music\FirstError\FirstError\obj\Debug\net6.0\FirstError.Api.pdb
 C:\Users\MERDAN\Music\FirstError\FirstError\obj\Debug\net6.0\FirstError.Api.genruntimeconfig.cache
 C:\Users\MERDAN\Music\FirstError\FirstError\obj\Debug\net6.0\ref\FirstError.Api.dll
+C:\Users\MERDAN\Music\FirstError\FirstError\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -1,6 +1,6 @@
 ﻿namespace FirstError.Client.Dtos
 {
-    public class CategoryGetDto
+    public partial class CategoryGetDto
     {
         public string? Name { get; set; }    
         public string? Description { get; set; }

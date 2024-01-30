@@ -29,6 +29,8 @@ namespace FirstError.Api.Client.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
+            string name = "sdsd";
+           char cdcd = name[name.Length-1];
             //tutalim bu yollla gedersizse eger ctorda cagir ve 
             //_logger.logInformation("product getall called")
             //logluyan zaman asp.smart da baxmag olur

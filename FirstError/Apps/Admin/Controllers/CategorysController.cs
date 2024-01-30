@@ -11,7 +11,7 @@ namespace FirstError.Api.Admin.Controllers
     [Route("api/Admin/[controller]")]
     [ApiExplorerSettings(GroupName = "admin_v1")]
     [ApiController]
-    [Authorize(Roles = "Admin,SuperAdmin")]
+    //[Authorize(Roles = "Admin,SuperAdmin")]
     public class CategorysController : ControllerBase
     {
       //sonradan tekrarda qeydlerim:
@@ -93,7 +93,7 @@ namespace FirstError.Api.Admin.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CategoryPostDto categoryPostDto)
+        public async Task<IActionResult> Create( CategoryPostDto categoryPostDto)
         {
 
             var result=   await _categoryService.CreateAsync(categoryPostDto);

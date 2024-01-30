@@ -4,6 +4,7 @@ using FirstApi.Core.Entities;
 using FirstApi.Core.Repositories1;
 using FirstApi.Service.Responses;
 using FirstApi.Services.Interfaces;
+using FirstError.Service.Exceptions;
 
 namespace FirstApi.Services.Implementations
 {
@@ -23,7 +24,8 @@ namespace FirstApi.Services.Implementations
         {
             if ( await categoryRepository.IsExist(x=>x.Name==categoryPostDto.Name))
             {
-                return new ApiResponse { StatusCode=400,Description="Name is already exist" };
+                return new ApiResponse { StatusCode = 400, Description = "Name is already exist" };
+                
             }
 
             Category category=_mapper.Map<Category>(categoryPostDto);   
@@ -87,9 +89,12 @@ namespace FirstApi.Services.Implementations
 
             if (category == null)
             {
-                return  new ApiResponse { StatusCode=404,Description="Item not found"};
+                //return  new ApiResponse { StatusCode=404,Description="Item not found"};
+                throw new ItemNotFoundException("Category not found");
+                //throw new ItemAlreadyExistException("name is already not found");
             }
             CategoryGetDto categoryGetDto = _mapper.Map<CategoryGetDto>(category);
+
             return new ApiResponse { items = categoryGetDto,StatusCode=200 };
         }
 
@@ -101,6 +106,7 @@ namespace FirstApi.Services.Implementations
             if (category == null)
             {
                 return new ApiResponse { StatusCode = 404, Description = "Item not found" };
+
             }
 
             category.Name= categoryUpdateDto.Name; 

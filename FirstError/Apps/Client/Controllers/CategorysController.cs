@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace FirstError.Api.Client.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin,SuperAdmin")]
+    //[Authorize(Roles = "Admin,SuperAdmin")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "client_v1")]
     public class CategorysController : ControllerBase
@@ -71,16 +71,38 @@ namespace FirstError.Api.Client.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-                  var result= await _categoryService.GetAsync(id);
 
-            
-            
+            //try
+            //{
 
-            return StatusCode(result.StatusCode,result);
+                var result = await _categoryService.GetAsync(id);
+
+                return StatusCode(result.StatusCode, result);
+            
+            //catch (Exception ex)
+            //{
+
+            //    //return StatusCode(500, new {errormesage=ex.Message});
+                
+            //    return StatusCode(500, ex.Message);
+            //}
+
+            //her adddimbasi trycatch yazilmamaisi ucun
+            //throw exception proyekti diyandjri
+            //middleware arashdir
+
+        }
+        [HttpPost("Create")]
+        public async Task<IActionResult> Create([FromBody]CategoryPostDto categoryPostDto)
+        {
+
+            var result = await _categoryService.CreateAsync(categoryPostDto);
+
+
+            return StatusCode(result.StatusCode, result);//dbya nese elave edende gonderiloir
         }
 
 
-       
-       
+
     }
 }

@@ -44,7 +44,6 @@ namespace FirstError.Service.Services.Implementations
         {
             //var identityUser = _httpContextAccessor.HttpContext.User.Identities.FirstOrDefault();
             string userid = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var user = _httpContextAccessor.HttpContext.User.Identity.Name;
             Product product = _mapper.Map<Product>(productPostDto);
             product.Image = productPostDto.formFile.SaveFile(_webHost.WebRootPath, "assets/images");
           
