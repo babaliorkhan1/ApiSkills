@@ -5,6 +5,7 @@ using FirstApi.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FirstError.Api.Client.Controllers
 {
@@ -18,9 +19,11 @@ namespace FirstError.Api.Client.Controllers
         //ama api controller action yazdigda htttpget ishlemir cunki routeda action teyin eliyirsen 
 
       private readonly ICategoryService _categoryService;
-        public CategorysController(ICategoryService categoryService)
+        private readonly ApiDbContext _apiDbContext;
+        public CategorysController(ICategoryService categoryService, ApiDbContext apiDbContext)
         {
             _categoryService = categoryService;
+            _apiDbContext = apiDbContext;
         }
 
 
@@ -63,7 +66,23 @@ namespace FirstError.Api.Client.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-          
+
+
+            _apiDbContext.Categories.GroupBy(x => x.Id).Select(x => new
+            {
+                Id = x.Key,
+                //key bize group bay etdiyimiz sheyin deyerin verir
+                count = x.Count()
+
+            });
+            _apiDbContext.Categories.Select(x => new
+            {
+                Id = x.Id,
+                //key bize group bay etdiyimiz sheyin deyerin verir
+                count = x.Name
+
+            });
+
 
             return StatusCode(200, await _categoryService.GetAllAsync());
         }
@@ -101,6 +120,12 @@ namespace FirstError.Api.Client.Controllers
 
             return StatusCode(result.StatusCode, result);//dbya nese elave edende gonderiloir
         }
+
+        //[HttpGet]
+        //public void GetAll1(ApiDbContext apiDbContext)
+        //{
+        //    apiDbContext.Categories.ToArray();
+        //}
 
 
 

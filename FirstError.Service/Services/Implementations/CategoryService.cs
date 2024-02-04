@@ -5,6 +5,8 @@ using FirstApi.Core.Repositories1;
 using FirstApi.Service.Responses;
 using FirstApi.Services.Interfaces;
 using FirstError.Service.Exceptions;
+using System.Security.Cryptography;
+using Microsoft.JSInterop;
 
 namespace FirstApi.Services.Implementations
 {
@@ -52,9 +54,13 @@ namespace FirstApi.Services.Implementations
             return new ApiResponse { StatusCode = 200 };
 
         }
-
+      
         public async Task<ApiResponse> GetAllAsync()
         {
+
+            //Tolist methodunun bashka shkeilde yazilmasinin bu yontemide var===
+            //var categoriess=await (from categories in _apiDbContext.Categories select categories).ToListAsync();
+
             IEnumerable<Category> query =await categoryRepository.GetAllAsync(x => !x.IsDeleted);//errro cixanda try catch sal orda daha yaxshi yazilir exception
 
              

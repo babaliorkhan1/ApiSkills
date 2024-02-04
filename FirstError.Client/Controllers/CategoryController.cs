@@ -16,8 +16,8 @@ namespace FirstError.Client.Controllers
 {
     public class ApiResponse
     {
-        //public string items { get; set; }
         public string items { get; set; }
+        //public string items { get; set; }
         public int StatusCode { get; set; }
         public string Description { get; set; }
 
@@ -42,45 +42,45 @@ namespace FirstError.Client.Controllers
 
 
         private readonly string endpoint = "https://localhost:7124";
-        //public async Task<IActionResult> Index()
-        //{
-        //    HttpClient httpClient = new HttpClient();
-        //    string token = Request.Cookies["token"];
+        public async Task<IActionResult> Index()
+        {
+            HttpClient httpClient = new HttpClient();
+            string token = Request.Cookies["token"];
 
-        //    if (token == null)
-        //    {
-        //        LoginDto loginDto = new LoginDto();
-        //        loginDto.UserName = "nihad123";
-        //        loginDto.Password = "Nihad123@";
-        //        var rsponse = await httpClient.PostAsJsonAsync<LoginDto>(endpoint + "/api/Accounts/Login", loginDto);
-
-
-        //        var contents = await rsponse.Content.ReadFromJsonAsync<ApiResponse>();
-
-        //        if (contents.StatusCode == 200)
-        //        {
-        //            Response.Cookies.Append("token", contents.items);
-        //            token = contents.items;
-        //        }
-
-        //    }
-
-        //    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-        //    GetItems<CategoryGetDto> getItems = new GetItems<CategoryGetDto>();
-
-        //    //getItems.Items = new List<CategoryGetDto>();
-        //    var response = await httpClient.GetStringAsync(endpoint + "/api/categorys");
+            if (token == null)
+            {
+                LoginDto loginDto = new LoginDto();
+                loginDto.UserName = "nihad123";
+                loginDto.Password = "Nihad123@";
+                var rsponse = await httpClient.PostAsJsonAsync<LoginDto>(endpoint + "/api/Accounts/Login", loginDto);
 
 
-        //    //JsonConvert.DeserializeObject<Person>(jsonString) ifadesini kullandığınızda,
-        //    //bu JSON verisi Person sınıfına dönüştürülür. JSON içindeki "FirstName" değeri,
-        //    //C# sınıfındaki FirstName özelliğine, "LastName" değeri LastName özelliğine,
-        //    //"Age" değeri ise Age özelliğine eşleştirilir.
+                var contents = await rsponse.Content.ReadFromJsonAsync<ApiResponse>();
 
-        //    getItems = JsonConvert.DeserializeObject<GetItems<CategoryGetDto>>(response);
+                if (contents.StatusCode == 200)
+                {
+                    Response.Cookies.Append("token", contents.items);
+                    token = contents.items;
+                }
 
-        //    return View(getItems.Items);
-        //}
+            }
+
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            GetItems<CategoryGetDto> getItems = new GetItems<CategoryGetDto>();
+
+            //getItems.Items = new List<CategoryGetDto>();
+            var response = await httpClient.GetStringAsync(endpoint + "/api/categorys");
+
+
+            //JsonConvert.DeserializeObject<Person>(jsonString) ifadesini kullandığınızda,
+            //bu JSON verisi Person sınıfına dönüştürülür. JSON içindeki "FirstName" değeri,
+            //C# sınıfındaki FirstName özelliğine, "LastName" değeri LastName özelliğine,
+            //"Age" değeri ise Age özelliğine eşleştirilir.
+
+            getItems = JsonConvert.DeserializeObject<GetItems<CategoryGetDto>>(response);
+
+            return View(getItems.Items);
+        }
         [HttpGet]
         public async Task<IActionResult> Create()
         {
@@ -114,6 +114,8 @@ namespace FirstError.Client.Controllers
 
             return View(reultss.items);
         }
+
+       
     }
 
 }

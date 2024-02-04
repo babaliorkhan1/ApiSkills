@@ -79,6 +79,13 @@ namespace FirstError.Service.Services.Implementations
 
         public async Task<ApiResponse> GetAllAsync()
         {
+
+            //Tolist methodunun bashka shkeilde yazilmasinin bu yontemide var===
+            //var categoriess=await (from categories in _apiDbContext.Categories select categories).ToListAsync();
+            //sartli hali ise //var categoriess=await (from categories in _apiDbContext.Categories where urun.id>eccceewd
+            //select categories)
+            //.ToListAsync();
+
             var query = await _productRepository.GetAllAsync(x=>!x.IsDeleted,"Category");
 
             IEnumerable<ProductGetDto> productGetDtos =await query
